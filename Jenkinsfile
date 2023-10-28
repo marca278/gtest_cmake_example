@@ -13,7 +13,7 @@ pipeline {
         }   
         stage('Build main') {
             steps {
-                sh(script: 'ninja -C ./build mainapp', returnStdout: true)
+                sh(script: 'make -C ./build mainapp', returnStdout: true)
             }
         }
         stage('Print Exit') {
