@@ -1,5 +1,5 @@
 pipeline {
-    agent agent_002
+    agent agent_001
     stages {
         stage('Print Greating') {
             steps {
