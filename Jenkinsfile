@@ -1,5 +1,5 @@
 pipeline {
-    agent {label 'linux'}
+    agent { label 'agent_002 || linux' }
     stages {
         stage('Print Greating') {
             steps {
