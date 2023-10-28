@@ -6,10 +6,13 @@ pipeline {
                 echo 'Hello'
             }
         }
+        stage('Configure Build') {
+            steps{
+                sh(script: 'cmake -S . -B build', returnStdout: true)
+            }
+            
         stage('Build main') {
             steps {
-                sh(script: 'echo "Building main"', returnStdout: true)
-                sh(script: 'cmake -S . -B build', returnStdout: true)
                 sh(script: 'ninja -C ./build mainapp', returnStdout: true)
             }
         }
