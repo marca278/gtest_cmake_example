@@ -10,7 +10,7 @@ pipeline {
             steps{
                 sh(script: 'cmake -S . -B build', returnStdout: true)
             }
-            
+        }   
         stage('Build main') {
             steps {
                 sh(script: 'ninja -C ./build mainapp', returnStdout: true)
